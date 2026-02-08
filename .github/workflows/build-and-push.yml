@@ -31,6 +31,6 @@ jobs:
           push: true
           build-args: POSTGRES_VERSION=${{ steps.get_version.outputs.minor_version }}
           tags: |
-            ${{ secrets.REGISTRY_URL }}/postgres-ssl:17
-            ${{ secrets.REGISTRY_URL }}/postgres-ssl:${{ steps.get_version.outputs.minor_version }}
-            ${{ secrets.REGISTRY_URL }}/postgres-ssl:latest
+            ${{ secrets.REGISTRY_URL }}/general/postgres-ssl:17
+            ${{ secrets.REGISTRY_URL }}/general/postgres-ssl:${{ steps.get_version.outputs.minor_version }}
+            ${{ secrets.REGISTRY_URL }}/general/postgres-ssl:latest
